@@ -1,0 +1,28 @@
+apiVersion: skaffold/v2beta11
+kind: Config
+metadata:
+  name: shop-skaffold
+build:
+  artifacts:
+  - image: rsingh25/cart
+    context: cart
+    sync:
+      manual:
+        - src: "src/**"
+          dest: "."
+    docker:
+      dockerfile: Dockerfile
+  - image: rsingh25/inventory
+    context: inventory
+    sync:
+      manual:
+        - src: "src/**"
+          dest: "."
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - k8s/cart-def.yaml
+    - k8s/inventory-def.yaml
+    - k8s/store.yaml
