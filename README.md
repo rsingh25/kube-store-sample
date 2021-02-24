@@ -1,24 +1,15 @@
-nginx ingress contorller
+## Pre-requisite to use of "Docker for Desktop"
+
+1. nginx ingress contorller
 
    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.44.0/deploy/static/provider/cloud/deploy.yaml
 
-Secret and Config map:
+2. Postgres intalled on the local server
 
+## Trouble shooting:
 
-DB:
+    kubectl run -it --rm --image=curlimages/curl debug-cli -- sh
 
-Inside kube cluster:
-    mysql-client
-    kubectl run -it --rm --image=mysql:5.6 --restart=Never mysql-client -- mysql -h mysql -ppassword
+Running the dev env using skaffold and nodemon
 
-    curl
-    kubectl run -it --rm --image=curlimages/curl debug-cli -- sh  
-
-
-
-Internal Services:
-
-
-Ingress Service:
-
-
+1. To be completed.

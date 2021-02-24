@@ -1,0 +1,10 @@
+{
+  "apiVersion": "v1",
+  "kind": "Namespace",
+  "metadata": {
+    "name": "store-dev",
+    "labels": {
+      "name": "dev"
+    }
+  }
+}

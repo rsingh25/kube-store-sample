@@ -14,6 +14,6 @@ metadata:
   name: storeapp
 data:
   # property-like keys; each key maps to a simple value
-  inventory.db.host: mysql
-  inventory.db.user: root
+  inventory.db.host: host.docker.internal
+  inventory.db.user: postgres
   inventory.db: inventory
